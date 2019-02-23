@@ -1,5 +1,6 @@
 # NeON Build File (http://github.com/c4s4/neon)
 
+doc: Build file for Go implementation of https://leetcode.com/problems/integer-to-roman/
 extends:
 - c4s4/build/golang.yml
 
@@ -13,6 +14,6 @@ targets:
   ask:
     doc: 'Ask for the number to convert'
     steps:
-    - prompt:  'Number'
-      to:      number
+    - prompt: 'Number'
+      to:     number
     - $: ['go', 'run', 'roman.go', =number]
