@@ -14,7 +14,5 @@ targets:
     doc: 'Ask for the number to convert'
     steps:
     - prompt:  'Number'
-      pattern: '^[0-9]{1,4}'
-      error:   'Must be a positive integer < 5000'
       to:      number
     - $: ['go', 'run', 'roman.go', =number]
