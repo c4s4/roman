@@ -6,7 +6,7 @@ extends:
 properties:
   NAME:     'roman'
   VERSION:  '1.0.0'
-  RUN_ARGS: ['1', '2', '3', '12', '47']
+  RUN_ARGS: ['1', '2', '3', '12', '47', '727', '1999', '2019', '3457', '4999']
 
 targets:
 
