@@ -1,10 +1,5 @@
-Template Go Project
-===================
+# Roman in Go
 
-To get help on build, type:
-
-```
-$ neon -info
-```
+This project is a Go implementation of https://leetcode.com/problems/integer-to-roman/. 
 
 *Enjoy!*
