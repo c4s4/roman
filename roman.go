@@ -60,12 +60,12 @@ var Mappings = map[int]map[string]string{
 var Max = 5000
 
 // Roman converts given integer to roman
-// - arab: is the number to convert in arabian form
+// - arabic: is the number to convert in arabic numerals
 // Return: roman number and error if any
-func Roman(arab string) (string, error) {
-	i, err := strconv.Atoi(arab)
+func Roman(arabic string) (string, error) {
+	i, err := strconv.Atoi(arabic)
 	if err != nil {
-		return "", fmt.Errorf("%s is not a valid arabian number", arab)
+		return "", fmt.Errorf("%s is not a valid arabic number", arabic)
 	}
 	if i <= 0 {
 		return "", fmt.Errorf("Romans can't count above 1")
@@ -85,10 +85,10 @@ func Roman(arab string) (string, error) {
 	return roman, nil
 }
 
-// Arab converts from roman to arab
+// Arabic converts from roman to arab
 // - roman: roman number to convert
-// Return arab number and an error if any
-func Arab(roman string) (string, error) {
+// Return arabic number and an error if any
+func Arabic(roman string) (string, error) {
 	for i := 1; i < Max; i++ {
 		candidate, _ := Roman(strconv.Itoa(i))
 		if candidate == roman {
@@ -99,12 +99,12 @@ func Arab(roman string) (string, error) {
 }
 
 func main() {
-	for _, arab := range os.Args[1:] {
-		roman, err := Roman(arab)
+	for _, arabic := range os.Args[1:] {
+		roman, err := Roman(arabic)
 		if err != nil {
 			fmt.Println(err.Error())
 			os.Exit(1)
 		}
-		fmt.Printf("%s -> %s\n", arab, roman)
+		fmt.Printf("%s -> %s\n", arabic, roman)
 	}
 }

@@ -52,7 +52,7 @@ func TestRomanErrors(t *testing.T) {
 
 func TestArab(t *testing.T) {
 	for expected, roman := range Numbers {
-		actual, _ := Arab(roman)
+		actual, _ := Arabic(roman)
 		if actual != expected {
 			t.Errorf("Arab(%s) should be '%s', '%s' instead\n", roman, expected, actual)
 		}
@@ -60,7 +60,7 @@ func TestArab(t *testing.T) {
 }
 
 func TestArabErrors(t *testing.T) {
-	_, err := Arab("Mickey")
+	_, err := Arabic("Mickey")
 	if err.Error() != "Mickey is not a valid roman number" {
 		t.Errorf("Bad error message: %s", err.Error())
 	}
